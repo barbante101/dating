@@ -1,0 +1,12 @@
+{
+  "name": "rbarbante/328/dating",
+  "authors": [
+    {
+      "name": "Roldan Barbante",
+      "email": "rbarbante@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
