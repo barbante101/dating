@@ -1,0 +1,20 @@
+
+body {
+    background-color: #FFE4C4;
+}
+
+img {
+    border-radius: 25px;
+    position: relative;
+}
+
+.left {
+    text-align: center;
+}
+
+.home {
+    padding: 250px;
+    border: #5a6268 1px solid;
+}
+
+
