@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="images/.png">
+    <title>Personal Information</title>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Personal Info</span>
+</nav>
+
+
+<div class="container">
+
+    <form action="#" method="post" class="form-horizontal border rounded p-3 mt-4">
+
+        <h1>Personal</h1>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-8">
+                <!--OWNER INFORMATION-->
+                <label for="first" class="col-mx-8 control-label"><strong>First Name</strong></label>
+                <div class="col-mx-8">
+                    <input  class="form-control" type="text" id="first" name="first" value="{{ @first }}">
+                </div>
+                <span class="err">
+                    <check if="{{ isset(@errors['first']) }}">
+                        {{ @errors['first'] }}
+                    </check>
+                </span><br>
+
+                <label for="last" class="col-mx-8 control-label"><strong>Last Name</strong></label>
+                <div class="col-mx-8">
+                    <input  class="form-control" type="text" id="last" name="last" value="{{ @last }}">
+                </div>
+                <span class="err">
+                    <check if="{{ isset(@errors['last']) }}">
+                        {{ @errors['last'] }}
+                    </check>
+                </span><br>
+
+                <label for="age" class="col-mx-8 control-label"><strong>Age</strong></label>
+                <div class="col-mx-8">
+                    <input  class="form-control" type="text" id="age" name="age" value="{{ @age }}">
+                </div>
+                <span class="err">
+                    <check if="{{ isset(@errors['age']) }}">
+                        {{ @errors['age'] }}
+                    </check>
+                </span><br>
+
+                <label class="col-mx-8 control-label"><strong>Gender</strong></label>
+                <div class="col-mx-8">
+                    <repeat group="{{ @gender }}" value="{{ @gend }}">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="gender" type="radio" id="{{ @gend }}"
+                                   value="{{ @gend }}" <check if="{{ @selectedPerson == @gend }}">checked="checked"</check>>
+                            <label class="form-check-label" for="{{ @gend }}">{{ @gend }}</label>
+                        </div>
+                    </repeat>
+                </div><br>
+
+                <label for="phone" class="col-mx-8 control-label"><strong>Phone Number</strong></label>
+                <div class="col-mx-8">
+                    <input  class="form-control" type="text" id="phone" name="phone" value="{{ @phone }}">
+                </div>
+                <span class="err">
+                    <check if="{{ isset(@errors['phone']) }}">
+                        {{ @errors['phone'] }}
+                    </check>
+                </span><br>
+
+            </div>
+
+            <div class="col-4">
+                <img class="img-fluid  rounded" src="/328/dating/images/bike3.jpg" alt="bike couple">
+                <p>
+                    <strong>Note:</strong> All information entered is protected by our privacy policy.
+                    Profile information can only be viewed by others with your permission.
+                </p>
+                <img class="img-fluid  rounded" src="/328/dating/images/bike4.jpg" alt="bike couple">
+
+
+            </div>
+        </div>
+
+        <div class="text-right mb-4 mr-4">
+            <button type="submit" class="btn btn-primary btn-lg">Next</button>
+        </div>
+    </form>
+
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
