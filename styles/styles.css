@@ -1,20 +1,15 @@
-
 body {
+    font-family: Tahoma, Geneva, sans-serif;
     background-color: #FFE4C4;
 }
-
-img {
-    border-radius: 25px;
-    position: relative;
+div.row.border {
+    border-radius: 20px;
 }
 
-.left {
-    text-align: center;
+img.img-fluid.rounded {
+    margin-top: 50px;
 }
 
-.home {
-    padding: 250px;
-    border: #5a6268 1px solid;
+.err {
+    color: red;
 }
-
-
