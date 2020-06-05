@@ -29,15 +29,15 @@
 
         <div class="col">
 
-            <label for="ownerid" class="control-label"><strong>Motorcycle Owner</strong></label>
+            <label for="ownerid" class="control-label"><strong>Owner</strong></label>
             <div class="" id="ownerid">
                 <ul class="list-group">
-                    <li class="list-group-item">Name: {{ @SESSION.first}} {{ @SESSION.last}} </li>
-                    <li class="list-group-item">Gender: {{ @SESSION.gender}}</li>
-                    <li class="list-group-item">Age: {{ @SESSION.age}}</li>
-                    <li class="list-group-item">Phone: {{ @SESSION.phone}}</li>
-                    <li class="list-group-item">Email: {{ @SESSION.email}}</li>
-                    <li class="list-group-item">State: {{ @SESSION.state}}</li>
+                    <li class="list-group-item">Name: {{ @SESSION.user->getFname() }} {{ @SESSION.user->getLname() }} </li>
+                    <li class="list-group-item">Gender: {{ @SESSION.user->getGender() }}</li>
+                    <li class="list-group-item">Age: {{ @SESSION.user->getAge() }}</li>
+                    <li class="list-group-item">Phone: {{ @SESSION.user->getPhone() }}</li>
+                    <li class="list-group-item">Email: {{ @SESSION.user->getEmail() }}</li>
+                    <li class="list-group-item">State: {{ @SESSION.user->getState() }}</li>
                 </ul>
             </div>
 
@@ -47,11 +47,10 @@
         <div class="col">
 
 
-
             <div class="mt-4 mb-4">
                 <label for="ownerid" class="col-mx-6 control-label"><strong>Biography</strong></label>
                 <div class="">
-                    <p>{{ @SESSION.bio}}</p>
+                    <p>{{ @SESSION.user->getBio()}}</p>
                 </div>
             </div>
 

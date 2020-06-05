@@ -12,17 +12,17 @@
     <title>Personal Information</title>
 </head>
 <body>
-
+<!-- As a heading -->
 <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1">Personal Info</span>
+    <span class="navbar-brand mb-0 h1">Wheelie out your feelies</span>
 </nav>
 
-
+<!--container body-->
 <div class="container">
 
     <form action="#" method="post" class="form-horizontal border rounded p-3 mt-4">
 
-        <h1>Personal</h1>
+        <h1>Personal Info</h1>
         <hr>
 
         <div class="row">
@@ -78,7 +78,16 @@
                         {{ @errors['phone'] }}
                     </check>
                 </span><br>
+                <hr>
 
+
+
+                <label for="premium" class="col-mx-8 control-label"><strong>Premium Account</strong></label>
+                <div class="col-mx-8">
+                    <label class="form-check form-check-inline">
+                        <input class="form-check-input" name="premium" type="checkbox" id="premium"> Sign up for a Premium Account
+                    </label>
+                </div>
             </div>
 
             <div class="col-4">
