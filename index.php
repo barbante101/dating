@@ -59,24 +59,14 @@ $f3->route('GET|POST /personal', function($f3) {
             $_SESSION['age'] = $_POST['age'];
             $_SESSION['gender'] = $_POST['gender'];
             $_SESSION['phone'] = $_POST['phone'];
-            $_SESSION['petName'] = $_POST['petName'];
-            $_SESSION['petAge'] = $_POST['petAge'];
+
 
 
             //Redirect to profile page
             $f3->reroute('/profile');
         }
     }
-    $f3->set('first', $_POST['first']);
-    $f3->set('last', $_POST['last']);
-    $f3->set('age', $_POST['age']);
-    $f3->set('selectedPerson', $_POST['gender']);
-    $f3->set('phone', $_POST['phone']);
-    $f3->set('petName', $_POST['petName']);
-    $f3->set('petAge', $_POST['petAge']);
-    $f3->set('selectedPet', $_POST['pGender']);
-    $f3->set('gender', $gender);
-    $f3->set('pGender', $gender);
+
 
     $view = new Template();
     echo $view->render('views/personal.html');
